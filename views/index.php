@@ -1,9 +1,5 @@
-<?php
-//include_once '../connection.php';
-include_once 'includes/header.php';
-//var_dump( $db);
-//$auth = new Authentication($db);
-?>
+<?php var_dump('../connection.php')?>
+<?php include_once 'includes/header.php';?>
 
 <div class="container" style="width:500px">
     <h3>Login</h3>
@@ -25,6 +21,4 @@ include_once 'includes/header.php';
     ?>
 </div>
 
-<?php
-include_once "../includes/footer.php"
-?>
+<?php include_once "../includes/footer.php" ?>
