@@ -9,17 +9,16 @@
             }
         ?>
     </li>
-    <li class="nav-item">
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Person
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Get</a>
-            <a class="dropdown-item" href="#">Add</a>
-        </div>
-    </div>
-  </div>
+
+    <li class="nav-item dropdown">
+        <a href="#person" class="dropdown-toggle" data-toggle="dropdown" >
+            Person 
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="listbox">
+            <li><a href="#" role="option">Add</a></li>
+            <li><a href="#" role="option">Edit</a></li>
+        </ul>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="editForm.php">Edit Accounts</a>
