@@ -1,17 +1,18 @@
 <?php include_once "../includes/header.php" ?>
 
 <div class="container" style="width:500px">
-    <h3>Insert Person</h3>
+    <h3>Insert User</h3>
     <form method="post">
-        <label>ID:</label>
-        <input type="text" name="id" class="form-control" placeholder="Enter ID..."/>
+        <label>Username:</label>
+        <input type="text" name="username" class="form-control" placeholder="Enter your username..."/>
         <br>
-        <label>Firstname:</label>
-        <input type="text" name="firstname" class="form-control" placeholder="Enter firstname..."/>
+        <label>Password:</label>
+        <input type="password" name="password" class="form-control" placeholder="Enter your password..."/>
         <br>
-        <label>Lastname:</label>
-        <input type="text" name="lastname" class="form-control" placeholder="Enter lastname..."/>
+        <label>Description:</label>
+        <input type="text" name="description" class="form-control" placeholder="Enter your description..."/>
         <br>
+        <input type="submit" name="addForm" value="insert">
     </form>
     <?php
       if(!empty($message))
