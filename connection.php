@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 spl_autoload_register(function ($class_name) {
-  $directories = ['models/', 'controllers/'];
+  $directories = ['/home/rekoriku/public_html/serverside19/mvcsession/models/', '/home/rekoriku/public_html/serverside19/mvcsession/controllers/'];
   foreach ($directories as $directory) {
     if(file_exists($directory.$class_name.'.php')){
       require $directory.$class_name.'.php';
