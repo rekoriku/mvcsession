@@ -1,4 +1,4 @@
-<?php echo __DIR__;?>
+<?php include_once '/home/rekoriku/public_html/serverside19/mvcsession/connection.php' ;?>
 <?php include_once 'includes/header.php';?>
 
 <div class="container" style="width:500px">
