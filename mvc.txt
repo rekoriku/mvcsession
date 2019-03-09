@@ -1,0 +1,29 @@
+Controllers:
+base.php  //poistetaan ja funktiot siirtyy muualle
+authentication.php
+form.php
+isLogged.php //temporary muuttuu session controlleriks ?
+
+Models:
+sqlcon.php // model.php
+  user.php
+  person.php
+
+Views:
+index.php
+links.php
+getUsers.php
+getPersons.php
+userForm.php
+personForm.php
+editPerson.php //add + edit
+editUser.php   //add + edit
+editForm.php //delete
+addForm.php  //delete
+
+Helpers:
+connection.php
+logout.php
+
+Misc:
+config.ini
