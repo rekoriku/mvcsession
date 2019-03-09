@@ -1,7 +1,5 @@
 <?php 
-include '../../path.php';
-require_once "$root/isLogged.php";
-echo $_SERVER["DOCUMENT_ROOT"];
+require_once '/home/rekoriku/public_html/serverside19/mvcsession/isLogged.php';
 include_once 'navbar.php';
 ?>
 <!DOCTYPE html>
