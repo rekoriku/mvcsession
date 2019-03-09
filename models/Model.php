@@ -1,5 +1,5 @@
 <?php
-class Sqlcon {
+class Model {
     private $pdo;
     private $server;
     private $username;
