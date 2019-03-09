@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 spl_autoload_register(function ($class_name) {
   $directories = ['models/', 'controllers/'];
   foreach ($directories as $directory) {
-    require "$directory.$class_name.php";
+    require $directory.$class_name.'.php';
   }
 });
 
