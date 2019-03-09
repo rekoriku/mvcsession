@@ -1,4 +1,3 @@
-<?php include_once '/home/rekoriku/public_html/serverside19/mvcsession/connection.php' ;?>
 <?php include_once 'includes/header.php';?>
 
 <div class="container" style="width:500px">
@@ -13,7 +12,7 @@
         <input type="submit" name="form" class="btn btn-primary" value="send"/>
     </form>
     <?php
-      $auth->login();
+      //$auth->login();
       if(!empty($message))
       {
         echo '<br><div class="alert alert-danger"><strong>'.$message.'</strong> </div>';
