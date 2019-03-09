@@ -15,6 +15,5 @@ spl_autoload_register(function ($class_name) {
 
 $config = parse_ini_file("config.ini"); // Get database information from ini file
 $db = new Model($config);              // Create new object from the Sqlcon class
-$asd = new Authentication($db);
 session_start();
  
