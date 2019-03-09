@@ -1,8 +1,8 @@
 <?php
 //include_once '../connection.php';
 include_once 'includes/header.php';
-var_dump( $db);
-$auth = new Authentication($db);
+//var_dump( $db);
+//$auth = new Authentication($db);
 ?>
 
 <div class="container" style="width:500px">
