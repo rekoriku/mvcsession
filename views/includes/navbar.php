@@ -9,9 +9,17 @@
             }
         ?>
     </li>
-    
     <li class="nav-item">
-      <a class="nav-link" href="addForm.php">Add new accounts</a>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Person
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Get</a>
+            <a class="dropdown-item" href="#">Add</a>
+        </div>
+    </div>
+  </div>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="editForm.php">Edit Accounts</a>
