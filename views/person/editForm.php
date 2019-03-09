@@ -1,7 +1,7 @@
 <?php include_once "../includes/header.php" ?>
 
 <div class="container" style="width:500px">
-    <h3>Insert Person</h3>
+    <h3>Edit Person</h3>
     <form method="post">
         <label>ID:</label>
         <input type="text" name="id" class="form-control" placeholder="Enter ID..."/>
@@ -12,6 +12,7 @@
         <label>Lastname:</label>
         <input type="text" name="lastname" class="form-control" placeholder="Enter lastname..."/>
         <br>
+        <input type="submit" name="" value="">
     </form>
     <?php
       if(!empty($message))
