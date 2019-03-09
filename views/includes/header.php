@@ -1,5 +1,6 @@
 <?php 
-//require_once __DIR__ . '../../isLogged.php';
+include '../../path.php';
+require_once "$root/isLogged.php";
 echo $_SERVER["DOCUMENT_ROOT"];
 include_once 'navbar.php';
 ?>
