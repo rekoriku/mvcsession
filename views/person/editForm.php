@@ -1,6 +1,4 @@
-<?php
-include_once "../includes/header.php"
-?>
+<?php include_once "../includes/header.php" ?>
 
 <div class="container" style="width:500px">
     <h3>Insert Person</h3>
@@ -23,6 +21,4 @@ include_once "../includes/header.php"
     ?>
 </div>
 
-<?php
-include_once "../includes/footer.php"
-?>
+<?php include_once "../includes/footer.php" ?>
