@@ -1,4 +1,4 @@
-<?php include_once "../includes/header.php" ?>
+<?php include "../includes/header.php" ?>
 
 <div class="container" style="width:500px">
     <h3>Insert Person</h3>
