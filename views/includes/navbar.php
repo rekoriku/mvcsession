@@ -9,15 +9,13 @@
             }
         ?>
     </li>
-
-    <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Person
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Search</a></li>
-          <li><a href="#">Add</a></li>
-          <li><a href="#">Edit</a></li>
-        </ul>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarPersonDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Person</a>
+        <div class="dropdown-menu" aria-labelledby="navbarPersonDropdownMenuLink">
+          <a class="dropdown-item" href="#">Search</a>
+          <a class="dropdown-item" href="#">Add</a>
+          <a class="dropdown-item" href="#">Edit</a>
+        </div>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="editForm.php">Edit Accounts</a>
