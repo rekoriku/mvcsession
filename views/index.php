@@ -1,4 +1,4 @@
-<?php var_dump('../connection.php')?>
+<?php var_dump(require '../connection.php');?>
 <?php include_once 'includes/header.php';?>
 
 <div class="container" style="width:500px">
