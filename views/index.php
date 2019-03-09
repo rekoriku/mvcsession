@@ -1,5 +1,7 @@
 <?php
-include_once "../includes/header.php"
+include_once "../includes/header.php";
+require_once 'connection.php';
+$auth = new Authentication($db);
 ?>
 
 <div class="container" style="width:500px">
@@ -11,9 +13,10 @@ include_once "../includes/header.php"
         <label>Password</label>
         <input type="password" name="password" class="form-control"/>
         <br>
-        <input type="submit" name="login" class="btn btn-primary" value="send"/>
+        <input type="submit" name="form" class="btn btn-primary" value="send"/>
     </form>
     <?php
+      $auth->login();
       if(!empty($message))
       {
         echo '<br><div class="alert alert-danger"><strong>'.$message.'</strong> </div>';
