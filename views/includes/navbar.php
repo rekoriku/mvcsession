@@ -10,14 +10,13 @@
         ?>
     </li>
 
-    <li class="nav-item dropdown">
-        <a href="#person" class="dropdown-toggle" data-toggle="dropdown" >
-            Person 
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu" role="listbox">
-            <li><a href="#" role="option">Add</a></li>
-            <li><a href="#" role="option">Edit</a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Person
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Add</a></li>
+          <li><a href="#">Edit</a></li>
         </ul>
     </li>
     <li class="nav-item">
