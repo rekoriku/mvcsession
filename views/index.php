@@ -1,6 +1,7 @@
 <?php
 require_once '../connection.php';
 include_once 'includes/header.php';
+var_dump( $db);
 $auth = new Authentication($db);
 ?>
 
