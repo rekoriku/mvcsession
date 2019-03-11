@@ -7,7 +7,7 @@ class Model {
     private $database; 
     
   function __construct(){
-    $config = parse_ini_file("../config.ini"); 
+    $config = parse_ini_file(__DIR__.'../config.ini'); 
     $this->server   = $config['server'];
     $this->username = $config['username'];
     $this->password = $config['password'];
