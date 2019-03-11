@@ -12,9 +12,9 @@ class UserModel extends Model
     }
 
     function insert() {
-        if(!empty($this->user) && !empty($this->pwd) && !empty($this->pri) && !empty($this->id) && !empty($this->description)) {
+        //if(!empty($this->user) && !empty($this->pwd) && !empty($this->pri) && !empty($this->id) && !empty($this->description)) {
             return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$this->user', '$this->pwd', '$this->pri', '$this->id', '$this->description')");
-        }
+        //}
     }
 
     function update() {
