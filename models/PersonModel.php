@@ -28,8 +28,18 @@ class PersonModel extends Model
       echo $ex->getMessage();
       $this->pdo->rollBack();
     }
-}
-}
+  }
 
-
- 
+  function deletePerson($id)
+  {
+    try{
+      $this->pdo->beginTransaction();
+      $this->query("DELETE FROM serverside19_persons WHERE id ='$id'");
+      $this->pdo->commit();
+    }
+    catch(Exception $ex){
+      echo $ex->getMessage();
+      $this->pdo->rollBack();
+    }
+  }
+}
