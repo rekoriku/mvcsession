@@ -23,7 +23,7 @@ class PersonModel extends Model
 
   function insert() {
     if(!empty($this->id) && !empty($this->fname) && !empty($this->sname)) {
-        $this->query("INSERT INTO serverside19_persons (id, fname, sname) VALUES ('$this->id', '$this->fname', '$this->sname')");
+        return $this->query("INSERT INTO serverside19_persons (id, fname, sname) VALUES ('$this->id', '$this->fname', '$this->sname')");
       }
     }
 
@@ -35,9 +35,7 @@ class PersonModel extends Model
 
   public static function delete($id) {
     if(!empty($id)){
-        $this->query("DELETE FROM serverside19_persons WHERE id ='$id'");
+      return $this->query("DELETE FROM serverside19_persons WHERE id ='$id'");
     }
   }
-
-
 }
