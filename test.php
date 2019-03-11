@@ -16,13 +16,14 @@ $user = new UserModel;
         
         //var_dump($user->getUsername("ankkkall"));
 
-        $user->user = "testari";
+        $user->user = "testari2";
         $user->pwd = md5("salasana123");
-        $user->pri = "0";
-        $user->id = "12345678901";
+        $user->pri = 0;
+        $user->id = 12345678901;
         $user->description = "Testi user joka on admin!";
-        
-        var_dump($user);
+        $user->insert();
+
+        var_dump($user->getUsername("testari2"));
 
         //$model->delete(525);
        // var_dump($model->delete(525));
