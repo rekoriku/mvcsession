@@ -13,17 +13,17 @@ class UserModel extends Model
 
     function insert() {
         if(!empty($this->user) && !empty($this->pwd) && !empty($this->pri) && !empty($this->id) && !empty($this->description)) {
-            return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$this->$user', '$this->$pwd', '$this->$pri', '$this->$id', '$this->$description')");
+            return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$this->user', '$this->pwd', '$this->pri', '$this->id', '$this->description')");
         }
     }
 
     function update() {
         if(!empty($this->id)) {
-            return$this->query("UPDATE serverside19_users SET user='$this->$user', id='$this->$id', description='$this->$description' WHERE id='$this->$id'");
+            return$this->query("UPDATE serverside19_users SET user='$this->user', id='$this->id', description='$this->description' WHERE id='$this->id'");
         }
     }
 
-    public static function delete($id) {
+    public function delete($id) {
         if(!empty($id)){
             return self::query("DELETE FROM serverside19_users WHERE id ='$id'");
         }
