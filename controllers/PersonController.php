@@ -6,7 +6,7 @@ function __construct(){
 }
 
 function get(){
-  echo $this->person->getPerson('kalle');
+  return $this->person->getPerson('kalle');
 }
 
 
