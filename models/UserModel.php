@@ -7,8 +7,8 @@ class UserModel extends Model
   public $id = "";
   public $description = "";
     
-    public static function getUsername($person) {
-        return self::query("SELECT * FROM serverside19_users WHERE user='$person'")->fetch(PDO::FETCH_ASSOC);
+    public function getUsername($person) {
+        return $this->query("SELECT * FROM serverside19_users WHERE user='$person'")->fetch(PDO::FETCH_ASSOC);
     }
 
     function insert() {
@@ -25,7 +25,7 @@ class UserModel extends Model
 
     public function delete($user) {
         if(!empty($user)){
-            return self::query("DELETE FROM serverside19_users WHERE user ='$user'");
+            return $this->query("DELETE FROM serverside19_users WHERE user ='$user'");
         }
     }
 }
