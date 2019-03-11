@@ -16,16 +16,17 @@ $user = new UserModel;
         
         //var_dump($user->getUsername("ankkkall"));
 
-        $user->user = "testari2";
-        $user->pwd = md5("salasana123");
-        $user->pri = 1;
-        $user->id = 12345678901;
-        $user->description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        $user->update();
+        // $user->user = "testari2";
+        // $user->pwd = md5("salasana123");
+        // $user->pri = 1;
+        // $user->id = 12345678901;
+        // $user->description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        // $user->update();
+        // echo $user->getUsername("testari2");
+        // var_dump($user->getUsername("testari2"));
 
-        echo $user->getUsername("testari2");
+        $user->delete("testari2");
         var_dump($user->getUsername("testari2"));
-
         //$model->delete(525);
        // var_dump($model->delete(525));
         //var_dump($model->getSname('Lursu'));
