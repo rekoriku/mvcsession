@@ -6,8 +6,12 @@ class PersonModel extends Model
   public $sname = "";
 
 
-  function getPerson($person) {
+  public static function getFname($person) {
     return $this->query("SELECT * FROM serverside19_persons WHERE fname='$person'")->fetch(PDO::FETCH_ASSOC);
+  }
+
+  public static function getSname($person) {
+    return $this->query("SELECT * FROM serverside19_persons WHERE sname='$person'")->fetch(PDO::FETCH_ASSOC);
   }
 
   function insert() {
