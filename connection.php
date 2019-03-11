@@ -14,7 +14,7 @@ spl_autoload_register(function ($class_name) {
   }
 });
 
-$config = parse_ini_file("config.ini"); // Get database information from ini file
-$db = new Model($config);              // Create new object from the Sqlcon class
+//$config = parse_ini_file("config.ini"); // Get database information from ini file
+$db = new Model();              // Create new object from the Sqlcon class
 session_start();
  
