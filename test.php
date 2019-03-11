@@ -18,7 +18,7 @@ $model = new PersonModel;
         // $model->fname = 'Dursu';
         // $model->sname = 'Lursu';
         // $model->insert();
-        var_dump(PersonModel::getSname('Lursu'));
+        var_dump($model->getSname('Lursu'));
         
         
         ?>
