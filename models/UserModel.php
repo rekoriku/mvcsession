@@ -23,9 +23,9 @@ class UserModel extends Model
         }
     }
 
-    public function delete($id) {
-        if(!empty($id)){
-            return self::query("DELETE FROM serverside19_users WHERE id ='$id'");
+    public function delete($user) {
+        if(!empty($user)){
+            return self::query("DELETE FROM serverside19_users WHERE user ='$user'");
         }
     }
 }
