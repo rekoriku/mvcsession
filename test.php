@@ -10,6 +10,12 @@ $person = new PersonController;
         <title>Person identity handling</title>
     </head>
     <body>
-        <?php var_dump($person->get());?>
+        <?php var_dump($person->get());
+        
+        
+        
+        
+        
+        ?>
     </body>
 </html>
