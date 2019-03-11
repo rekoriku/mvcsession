@@ -14,7 +14,7 @@ $user = new UserModel;
         <?php 
         //
         
-        var_dump($user->getUsername("Ankall"));
+        var_dump($user->getUsername("ankkkall"));
 
         //$model->delete(525);
        // var_dump($model->delete(525));
