@@ -5,7 +5,6 @@ class PersonModel extends Model
   public $fname = "";
   public $sname = "";
 
-
   public static function getFname($person) {
     return $this->query("SELECT * FROM serverside19_persons WHERE fname='$person'")->fetch(PDO::FETCH_ASSOC);
   }
@@ -31,6 +30,4 @@ class PersonModel extends Model
       return $this->query("DELETE FROM serverside19_persons WHERE id ='$id'");
     }
   }
-
-
 }

@@ -6,55 +6,26 @@ class UserModel extends Model
   public $pri = "";
   public $id = "";
   public $description = "";
-
-
-  function getUser($person) {
-    return $this->query("SELECT * FROM serverside19_persons WHERE fname='$person'")->fetch(PDO::FETCH_ASSOC);
-  }
-
-  function insert() {
-      if(!empty($user) && !empty($pwd) && !empty($pri) && !empty($id) && !empty($description))
-      {
-        try{
-            $this->pdo->beginTransaction();
-            $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$user', '$pwd', '$pri', '$id', '$description')");
-            $this->pdo->commit();
-          }
-          catch(Exception $ex){
-            echo $ex->getMessage();
-            $this->pdo->rollBack();
-          }
+    
+      public static function getUsername($person) {
+        return self::query("SELECT * FROM serverside19_users WHERE user='$person'")->fetch(PDO::FETCH_ASSOC);
       }
-  }
-
-  function update() {
-    if(!empty($user) && !empty($pwd) && !empty($pri) && !empty($id) && !empty($description))
-    {
-        try{
-        $this->pdo->beginTransaction();
-        $this->query("UPDATE serverside19_users SET user='$user', id='$id', description='$description' WHERE id='$id'");
-        $this->pdo->commit();
-        } 
-        catch(Exception $ex){
-        echo $ex->getMessage();
-        $this->pdo->rollBack();
+    
+      function insert() {
+        if(!empty($this->user) && !empty($this->pwd) && !empty($this->pri) && !empty($this->id) && !empty($this->description)) {
+            return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$user', '$pwd', '$pri', '$id', '$description')");
+          }
         }
-    }
-  }
-
-  function delete($id)
-  {
-      if(!empty($id))
-      {
-        try{
-            $this->pdo->beginTransaction();
-            $this->query("DELETE FROM serverside19_persons WHERE id ='$id'");
-            $this->pdo->commit();
-          }
-          catch(Exception $ex){
-            echo $ex->getMessage();
-            $this->pdo->rollBack();
-          }
+    
+      function update() {
+        if(!empty($this->id)) {
+            return$this->query("UPDATE serverside19_users SET user='$user', id='$id', description='$description' WHERE id='$id'");
+        }
+      }
+    
+      public static function delete($id) {
+        if(!empty($id)){
+          return self::query("DELETE FROM serverside19_users WHERE id ='$id'");
         }
       }
 }
