@@ -21,9 +21,8 @@ $user = new UserModel;
         $user->pri = "0";
         $user->id = "12345678901";
         $user->description = "Testi user joka on admin!";
-        $user->insert();
-
-        var_dump($user->getUsername("testari"));
+        
+        var_dump($user->insert());
 
         //$model->delete(525);
        // var_dump($model->delete(525));
