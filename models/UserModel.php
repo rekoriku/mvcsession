@@ -18,8 +18,8 @@ class UserModel extends Model
     }
 
     function update() {
-        if(!empty($this->id)) {
-            return$this->query("UPDATE serverside19_users SET user='$this->user', id='$this->id', description='$this->description' WHERE id='$this->id'");
+        if(!empty($this->user)) {
+            return $this->query("UPDATE serverside19_users SET user='$this->user', id='$this->id', description='$this->description' WHERE id='$this->id'");
         }
     }
 
