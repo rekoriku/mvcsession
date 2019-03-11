@@ -8,7 +8,5 @@ function __construct(){
 function get(){
   return $this->person->getPerson('kalle');
 }
-
-
 }
 ?>
