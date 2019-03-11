@@ -22,7 +22,7 @@ $user = new UserModel;
         $user->id = "12345678901";
         $user->description = "Testi user joka on admin!";
         
-        var_dump($user->insert());
+        var_dump($user);
 
         //$model->delete(525);
        // var_dump($model->delete(525));
