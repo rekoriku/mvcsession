@@ -2,7 +2,7 @@
 require_once 'connection.php';
 //$person = new PersonController;
 $model = new PersonModel;
-
+$user = new UserModel;
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,9 +14,11 @@ $model = new PersonModel;
         <?php 
         //
         
-        $model->delete(525);
+        var_dump($user->getUsername("Ankall"));
+
+        //$model->delete(525);
        // var_dump($model->delete(525));
-        var_dump($model->getSname('Lursu'));
+        //var_dump($model->getSname('Lursu'));
         
         
         ?>
