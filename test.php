@@ -14,10 +14,10 @@ $model = new PersonModel;
         <?php 
         //
         
-        // $model->id = 525;
-        // $model->fname = 'Dursu';
-        // $model->sname = 'Lursu';
-        // $model->insert();
+        $model->id = 525;
+        $model->fname = 'Sursu';
+        $model->sname = 'Lursu';
+        $model->update();
         var_dump($model->getSname('Lursu'));
         
         
