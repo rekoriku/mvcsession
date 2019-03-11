@@ -1,6 +1,6 @@
 <?php 
 require_once 'connection.php';
-$person = new PersonController;
+//$person = new PersonController;
 $model = new PersonModel;
 
 ?>
