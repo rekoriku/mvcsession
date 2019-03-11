@@ -18,7 +18,7 @@ class PersonModel extends Model
   }
 
   function idExist(){
-  return $this->id === $this->getId($this->id)['id'];    //check if id exists in database
+  return $this->id == $this->getId($this->id)['id'];    //check if id exists in database
 }
 
   function insert() {
