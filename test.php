@@ -20,7 +20,7 @@ $user = new UserModel;
         $user->pwd = md5("salasana123");
         $user->pri = 1;
         $user->id = 12345678901;
-        $user->description = "Testi user joka on admin!";
+        $user->description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         $user->update();
 
         echo $user->getUsername("testari2");
