@@ -6,7 +6,7 @@ class PersonModel extends Model
   public $sname = "";
 
   public function getId($id) {
-    return $this->query("SELECT * FROM serverside19_persons WHERE fname='$id'")->fetch(PDO::FETCH_ASSOC);
+    return $this->query("SELECT * FROM serverside19_persons WHERE id='$id'")->fetch(PDO::FETCH_ASSOC);
   }
 
   public function getFname($person) {
