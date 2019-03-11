@@ -2,7 +2,7 @@
 Class Helper {
   static public function printForm($arr){
     echo "<form method='post'>";
-    array_walk($arr,[$this,"keyVal"]);
+    array_walk($arr,[self,"keyVal"]);
     echo "<input type='submit' name='editForm' value='update'></form>";
   }
 
@@ -27,7 +27,7 @@ Class Helper {
   }
 
   static public function isEmptyMap($vals){
-    return array_map([$this,'isEmptyPOST'], $vals); //make array consisting true/false
+    return array_map([self,'isEmptyPOST'], $vals); //make array consisting true/false
   }
 
   static public function isEmptyAny($vals){
@@ -36,7 +36,7 @@ Class Helper {
 
   static public function issetMap($vals){
     //$temp = self::issetPOST;
-    return array_map([$this,'issetPOST'], $vals);   //make array consisting true/false
+    return array_map([self,'issetPOST'], $vals);   //make array consisting true/false
   }
 
   static public function issetAll($vals){
