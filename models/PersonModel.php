@@ -17,7 +17,7 @@ class PersonModel extends Model
     return $this->query("SELECT * FROM serverside19_persons WHERE sname='$person'")->fetch(PDO::FETCH_ASSOC);
   }
 
-  protected function idExist(){
+  function idExist(){
   return $this->id === $this->getId($this->id)['id'];    //check if id exists in database
 }
 

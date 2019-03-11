@@ -18,6 +18,7 @@ $model = new PersonModel;
         $model->fname = 'Sursu';
         $model->sname = 'Lursu';
         $model->update();
+        var_dump($model->idExist(525));
         var_dump($model->getSname('Lursu'));
         
         
