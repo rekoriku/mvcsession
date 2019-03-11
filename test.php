@@ -23,6 +23,8 @@ $user = new UserModel;
         $user->description = "Testi user joka on admin!";
         $user->insert();
 
+        var_dump($user->getUsername("testari"));
+
         //$model->delete(525);
        // var_dump($model->delete(525));
         //var_dump($model->getSname('Lursu'));
