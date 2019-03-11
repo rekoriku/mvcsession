@@ -24,6 +24,7 @@ class Model {
   }
 
 
+
   function getUser($user){
     return $this->query("SELECT * FROM serverside19_users WHERE user='$user'")->fetch(PDO::FETCH_ASSOC);
   }
