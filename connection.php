@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 spl_autoload_register(function ($class_name) {
   $path = __DIR__;
-  $directories = ["$path/models/", "$path/controllers/"];
+  $directories = ["$path/models/", "$path/controllers/", "$path/helpers/"];
   foreach ($directories as $directory) {
     if(file_exists($directory.$class_name.'.php')){
       require $directory.$class_name.'.php';

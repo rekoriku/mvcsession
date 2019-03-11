@@ -1,9 +1,5 @@
 <?php
-class Form extends Base {
-
-function __construct($db){
-  parent::__construct($db);
-}
+class Form {
 
 function insert(){
   //check if all posted values are true and if so set the variables

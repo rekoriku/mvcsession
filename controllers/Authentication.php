@@ -1,17 +1,9 @@
 <?php
-class Authentication extends Base {
-  private $user;
-  private $pass;
-
-
-function __construct($db){
-  parent::__construct($db);
-}
-
+class Authentication {
 function login(){
   //check if all posted values are true and if so set the variables
-  $isset = $this->issetAll(["username","password","form"]);
-  $isempty = $this->isEmptyAny(["username","password"]);
+  $isset = Helper::issetAll(["username","password","form"]);
+  $isempty = Helper::isEmptyAny(["username","password"]);
   
   if($isset == true && $isempty == false){
     $this->setLoginVars();
