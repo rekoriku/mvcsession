@@ -1,6 +1,7 @@
 <?php 
 require_once 'connection.php';
 $person = new PersonController;
+$model = new PersonModel;
 
 ?>
 <!DOCTYPE html>
@@ -10,13 +11,14 @@ $person = new PersonController;
         <title>Person identity handling</title>
     </head>
     <body>
-        <?php var_dump($person->get());
+        <?php 
+        //
         
-        $person->id = 10;
-        $person->fname = 'Mursu';
-        $person->lname = 'Tursu';
-        $person->insert();
-        
+        $model->id = 10;
+        $model->fname = 'Mursu';
+        $model->sname = 'Tursu';
+        $model->insert();
+        var_dump(PersonModel::getSname('Tursu'));
         
         
         ?>
