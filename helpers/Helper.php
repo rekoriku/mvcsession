@@ -31,16 +31,16 @@ Class Helper {
   }
 
   static public function isEmptyAny($vals){
-    return $this->allTrue($this->isEmptyMap($vals));    // check if any of the variables is empty
+    return self::allTrue(self::isEmptyMap($vals));    // check if any of the variables is empty
   }
 
   static public function issetMap($vals){
-    //$temp = $this->issetPOST;
+    //$temp = self::issetPOST;
     return array_map([$this,'issetPOST'], $vals);   //make array consisting true/false
   }
 
   static public function issetAll($vals){
-    return $this->allTrue($this->issetMap($vals));  // check if all variables are set
+    return self::allTrue(self::issetMap($vals));  // check if all variables are set
   }
 
 }
