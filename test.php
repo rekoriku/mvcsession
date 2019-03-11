@@ -17,7 +17,7 @@ $user = new UserModel;
         //var_dump($user->getUsername("ankkkall"));
 
         $user->user = "testari";
-        $user->pwd = "salasana123";
+        $user->pwd = md5("salasana123");
         $user->pri = "0";
         $user->id = "12345678901";
         $user->description = "Testi user joka on admin!";
