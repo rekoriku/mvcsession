@@ -27,7 +27,7 @@ Class Helper {
   }
 
   static public function isEmptyMap($vals){
-    return array_map([self,'isEmptyPOST'], $vals); //make array consisting true/false
+    return array_map('self::isEmptyPOST', $vals); //make array consisting true/false
   }
 
   static public function isEmptyAny($vals){
@@ -36,7 +36,7 @@ Class Helper {
 
   static public function issetMap($vals){
     //$temp = self::issetPOST;
-    return array_map([self,'issetPOST'], $vals);   //make array consisting true/false
+    return array_map('self::issetPOST', $vals);   //make array consisting true/false
   }
 
   static public function issetAll($vals){
