@@ -18,8 +18,8 @@ $user = new UserModel;
 
         $user->user = "testari";
         $user->pwd = "salasana123";
-        $user->pri = 0;
-        $user->id = 12345678901;
+        $user->pri = "0";
+        $user->id = "12345678901";
         $user->description = "Testi user joka on admin!";
         $user->insert();
 
