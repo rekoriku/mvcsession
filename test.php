@@ -12,7 +12,10 @@ $person = new PersonController;
     <body>
         <?php var_dump($person->get());
         
-        
+        $person->id = 10;
+        $person->fname = 'Mursu';
+        $person->lname = 'Tursu';
+        $person->insert();
         
         
         
