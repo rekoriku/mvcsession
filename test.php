@@ -18,10 +18,10 @@ $user = new UserModel;
 
         $user->user = "testari2";
         $user->pwd = md5("salasana123");
-        $user->pri = 0;
+        $user->pri = 1;
         $user->id = 12345678901;
         $user->description = "Testi user joka on admin!";
-        $user->insert();
+        $user->update();
 
         echo $user->getUsername("testari2");
         var_dump($user->getUsername("testari2"));
