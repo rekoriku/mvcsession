@@ -7,6 +7,11 @@ class UserModel extends Model
   public $id = "";
   public $description = "";
     
+    public function getAll()
+    {
+        return $this->query("SELECT * FROM serverside19_users")->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function getUsername($person) {
         return $this->query("SELECT * FROM serverside19_users WHERE user='$person'")->fetch(PDO::FETCH_ASSOC);
     }
