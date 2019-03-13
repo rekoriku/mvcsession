@@ -1,6 +1,10 @@
 <?php
 class Authentication {
-  private $user = new UserController;
+  private $user;
+
+  function __construct() {
+    $this->user = new UserController;
+  }
 
 public static function login(){
   //check if all posted values are true and if so set the variables
