@@ -13,7 +13,7 @@ class PersonController
 
   function getFname($fname)
   {
-    return $person->getFname($fname);
+    return $this->person->getFname($fname);
   }
 
   function get(){
