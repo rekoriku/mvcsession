@@ -26,7 +26,7 @@ private function validateUser($username,$password){
     Session::set("login",true);
     // $_SESSION["username"] = $this->user;
     // $_SESSION["login"] = true;
-    echo "toimii";
+    var_dump($_SESSION);
     //header("Location: links.php");
   } else {
     echo "Wrong username or password";
