@@ -2,7 +2,7 @@
 class Authentication {
 public static function login(){
   //check if all posted values are true and if so set the variables
-  $isset = isset("username","password","form");
+  $isset = Helper::issetAll("username","password","form");
   $isempty = Helper::isEmptyAny(["username","password"]);
   
   if($isset == true && $isempty == false){
