@@ -19,10 +19,10 @@
             {
                 $personController = new PersonController;
                 $results = $personController->getFname($_POST["firstname"]);
-                // foreach($results as $person)
-                // {
-                //     echo $person;
-                // }
+                foreach($results as $person)
+                {
+                    echo $person;
+                }
             }
         }
 
