@@ -10,6 +10,7 @@
       $personController = new PersonController;
       if($personController->update($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
       {
+        header("views/person/getForm.php");
         $message = "Succesfully edited persons record in the database!";
       }
       else
