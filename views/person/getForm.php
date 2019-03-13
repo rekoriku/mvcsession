@@ -21,9 +21,10 @@
                 $results = $personController->getFname($_POST["firstname"]);
                 foreach($results as $person)
                 {
-                    var_dump($person['id']);
                     echo $person['id'];
-                    //jpotaiadspgvsigvpoisnpmid
+                    echo $person['fname'];
+                    echo $person['sname'];
+                    echo "<br>";
                 }
             }
         }
