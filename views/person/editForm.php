@@ -5,7 +5,7 @@
 
   if(isset($_POST["editForm"]))
   {
-    if(Helper::issetAll(["username","password","form"]))
+    if(Helper::issetAll(["id","firstname","lastname"]))
     {
       $personController = new PersonController;
       if($personController->update($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
@@ -32,7 +32,7 @@
         <label>Lastname:</label>
         <input type="text" name="lastname" class="form-control" value="<?php echo $_GET["sname"]?>"/>
         <br>
-        <input type="submit" name="editForm" value="edit">
+        <input type="submit" name="editForm" value="Edit" class="btn btn-primary">
     </form>
     <?php
       if(!empty($message))
