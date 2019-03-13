@@ -1,4 +1,15 @@
-<?php include "../includes/header.php" ?>
+<?php 
+include "../includes/header.php"; 
+
+if(isset($_POST["addForm"]))
+{
+  if(isset($_POST["id"]) && isset($_POST["firstname"]) && isset($_POST["lastname"]))
+  {
+    $personController = new PersonController;
+    $personController->update($_POST["id"], $_POST["firstname"], $_POST["lastname"]);
+  }
+}
+?>
 
 <div class="container" style="width:500px">
     <h3>Edit Person</h3>
