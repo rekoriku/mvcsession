@@ -16,4 +16,12 @@ class PersonController
   function get(){
     return $this->person->getPerson('kalle');
   }
+
+  function insert($id, $fname, $sname)
+  {
+    $this->person->id = $id;
+    $this->person->fname = $fname;
+    $this->person->sname = $sname;
+    $this->person->insert();
+  }  
 }
