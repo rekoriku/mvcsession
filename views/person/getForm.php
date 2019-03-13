@@ -21,7 +21,7 @@
                 $results = $personController->getFname($_POST["firstname"]);
                 foreach($results as $person)
                 {
-                    echo $person;
+                    $person['id'];
                 }
             }
         }
