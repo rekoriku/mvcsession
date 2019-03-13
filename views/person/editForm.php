@@ -24,13 +24,13 @@
     <h3>Edit Person</h3>
     <form method="post">
         <label>ID:</label>
-        <input type="text" name="id" class="form-control" placeholder="Enter ID..."/>
+        <input type="text" name="id" class="form-control" value="<?php echo $_GET["id"]?>"/>
         <br>
         <label>Firstname:</label>
-        <input type="text" name="firstname" class="form-control" placeholder="Enter firstname..."/>
+        <input type="text" name="firstname" class="form-control" value="<?php echo $_GET["firstname"]?>"/>
         <br>
         <label>Lastname:</label>
-        <input type="text" name="lastname" class="form-control" placeholder="Enter lastname..."/>
+        <input type="text" name="lastname" class="form-control" value="<?php echo $_GET["lastname"]?>"/>
         <br>
         <input type="submit" name="editForm" value="edit">
     </form>
