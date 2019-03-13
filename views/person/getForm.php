@@ -8,10 +8,10 @@
       if(isset(($_POST["firstname"])))
       {
         $personController = new PersonController;
-        $results = $personController->getAll();
+        $results = $personController->getFname($_POST["firstname"]);
         foreach($results as $person)
         {
-            
+            echo $person;
         }
       }
     }
