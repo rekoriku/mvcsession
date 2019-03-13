@@ -1,12 +1,10 @@
 <?php
-class PersonController extends Base {
-private $person;
-function __construct(){
-  $this->person = new PersonModel;
-}
+class PersonController {
 
-function get(){
-  return $this->person->getPerson('kalle');
-}
+
+  function get(){
+    $person = new PersonModel;
+    return $person->getFname('kalle');
+  }
 }
 ?>
