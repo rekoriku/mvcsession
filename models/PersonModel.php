@@ -33,9 +33,9 @@ class PersonModel extends Model
     }
 
   function update() {
-    if(!empty($this->id) && $this->idExist($this->id)) {
-        $this->query("UPDATE serverside19_persons SET id='$this->id', fname='$this->fname', sname='$this->sname' WHERE id='$this->id'");
-    }
+    // if(!empty($this->id) && $this->idExist($this->id)) {
+        return $this->query("UPDATE serverside19_persons SET id='$this->id', fname='$this->fname', sname='$this->sname' WHERE id='$this->id'");
+    // }
   }
 
   public function delete($id) {
