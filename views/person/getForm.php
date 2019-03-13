@@ -18,7 +18,7 @@
             if(isset($_POST["firstname"]))
             {
                 $personController = new PersonController;
-                $results = $personController->getFname($_POST["firstname"]);
+                $results = (array)$personController->getFname($_POST["firstname"]);
                 foreach($results as $person)
                 {
                     $person['id'];
