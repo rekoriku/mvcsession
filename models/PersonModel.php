@@ -15,7 +15,7 @@ class PersonModel extends Model
   }
 
   public function getFname($person) {
-    return $this->query("SELECT * FROM serverside19_persons WHERE fname='$person'")->fetch(PDO::FETCH_ASSOC);
+    return $this->query("SELECT * FROM serverside19_persons WHERE fname='$person'")->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function getSname($person) {
