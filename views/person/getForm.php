@@ -13,23 +13,23 @@
         <input type="submit" name="getForm" class="btn btn-primary" value="get"/>
     </form>
     <?php
-        if(isset($_POST["getForm"]))
-        {
-            if(isset(($_POST["firstname"])))
-            {
-                $personController = new PersonController;
-                $results = $personController->getFname($_POST["firstname"]);
-                foreach($results as $person)
-                {
-                    echo $person;
-                }
-            }
-        }
+        // if(isset($_POST["getForm"]))
+        // {
+        //     if(isset(($_POST["firstname"])))
+        //     {
+        //         $personController = new PersonController;
+        //         $results = $personController->getFname($_POST["firstname"]);
+        //         foreach($results as $person)
+        //         {
+        //             echo $person;
+        //         }
+        //     }
+        // }
 
-        if(!empty($message))
-        {
-            echo $message;
-        }
+        // if(!empty($message))
+        // {
+        //     echo $message;
+        // }
     ?>
 </div>
 
