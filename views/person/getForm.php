@@ -35,6 +35,7 @@
                 }
                 $tbl .= '</tbody></table>';
             }
+            echo $tbl;
         }
 
         if(!empty($message))
