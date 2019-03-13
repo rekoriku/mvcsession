@@ -23,5 +23,13 @@ class PersonController
     $this->person->fname = $fname;
     $this->person->sname = $sname;
     $this->person->insert();
+  }
+
+  function update($id, $fname, $sname)
+  {
+    $this->person->id = $id;
+    $this->person->fname = $fname;
+    $this->person->sname = $sname;
+    $this->person->update();
   }  
 }
