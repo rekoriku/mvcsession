@@ -1,7 +1,7 @@
 <?php
 class Session {
 
-  public static function isset($val){
+  public static function issetSes($val){
     return isset($_SESSION[$val]);
   }
 
