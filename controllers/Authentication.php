@@ -10,7 +10,7 @@ public static function login(){
   if($isset == true && $isempty == false){
     var_dump('hello');
     // $this->setLoginVars();
-    self->validateUser($_POST["username"],$_POST["password"]);
+    $this->validateUser($_POST["username"],$_POST["password"]);
   } 
 }
 
