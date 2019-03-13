@@ -32,7 +32,7 @@
         <label>Lastname:</label>
         <input type="text" name="lastname" class="form-control" value="<?php echo $_GET["sname"]?>"/>
         <br>
-        <input type="submit" name="editForm" value="edit">
+        <input type="submit" name="editForm" value="edit" class="btn btn-primary">
     </form>
     <?php
       if(!empty($message))
