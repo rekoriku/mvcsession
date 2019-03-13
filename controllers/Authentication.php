@@ -1,7 +1,7 @@
 <?php
 class Authentication {
 
-public static function login(){
+function login(){
   //check if all posted values are true and if so set the variables
   $isset = Helper::issetAll(["username","password","form"]);
   $isempty = Helper::isEmptyAny(["username","password"]);
@@ -10,7 +10,7 @@ public static function login(){
   if($isset == true && $isempty == false){
     var_dump('hello');
     // $this->setLoginVars();
-    self::validateUser($_POST["username"],$_POST["password"]);
+    $this->validateUser($_POST["username"],$_POST["password"]);
   }
 }
 
