@@ -1,5 +1,4 @@
 <?php include_once 'includes/header.php';?>
-
 <div class="container" style="width:500px">
     <h3>Login</h3>
     <form method="post">

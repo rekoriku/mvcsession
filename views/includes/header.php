@@ -1,4 +1,5 @@
 <?php 
+Session::start();
 require_once '/home/rekoriku/public_html/serverside19/mvcsession/autoload.php';
 include_once 'navbar.php';
 ?>
