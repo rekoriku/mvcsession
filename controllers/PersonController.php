@@ -13,6 +13,11 @@ class PersonController
     return $this->person->getAll();
   }
 
+  function getFname($fname)
+  {
+    return $person->getFname($fname);
+  }
+
   function get(){
     return $this->person->getPerson('kalle');
   }
@@ -31,5 +36,5 @@ class PersonController
     $this->person->fname = $fname;
     $this->person->sname = $sname;
     $this->person->update();
-  }  
+  }
 }

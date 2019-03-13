@@ -1,4 +1,21 @@
-<?php include_once "../includes/header.php" ?>
+<?php 
+    include_once "../includes/header.php";
+
+    $message = "";
+
+    if(isset($_POST["getForm"]))
+    {
+      if(isset(($_POST["firstname"])))
+      {
+        $personController = new PersonController;
+        $results = $personController->getAll();
+        foreach($results as $person)
+        {
+            
+        }
+      }
+    }
+?>
 
 <div class="container" style="width:500px">
     <h3>Get Person</h3>

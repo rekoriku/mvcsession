@@ -1,11 +1,21 @@
 <?php
   include "../includes/header.php";
+  
+  $message = "";
+
   if(isset($_POST["addForm"]))
   {
     if(isset($_POST["id"]) && isset($_POST["firstname"]) && isset($_POST["lastname"]))
     {
       $personController = new PersonController;
-      $personController->insert($_POST["id"], $_POST["firstname"], $_POST["lastname"]);
+      if($personController->insert($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
+      {
+        $message = "Succesfully inserted a new person to the database.";
+      }
+      else
+      {
+        $message = "Failed to insert a new person to the database.";
+      }
     }
   }
 ?>

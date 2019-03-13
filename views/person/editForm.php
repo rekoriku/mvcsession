@@ -1,14 +1,23 @@
 <?php 
-include "../includes/header.php"; 
+  include "../includes/header.php"; 
 
-if(isset($_POST["addForm"]))
-{
-  if(isset($_POST["id"]) && isset($_POST["firstname"]) && isset($_POST["lastname"]))
+  $message = "";
+
+  if(isset($_POST["editForm"]))
   {
-    $personController = new PersonController;
-    $personController->update($_POST["id"], $_POST["firstname"], $_POST["lastname"]);
+    if(isset($_POST["id"]) && isset($_POST["firstname"]) && isset($_POST["lastname"]))
+    {
+      $personController = new PersonController;
+      if($personController->update($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
+      {
+        $message = "Succesfully edited persons record in the database!";
+      }
+      else
+      {
+        $message = "Failed to edit person in the database!";
+      }
+    }
   }
-}
 ?>
 
 <div class="container" style="width:500px">
@@ -23,7 +32,7 @@ if(isset($_POST["addForm"]))
         <label>Lastname:</label>
         <input type="text" name="lastname" class="form-control" placeholder="Enter lastname..."/>
         <br>
-        <input type="submit" name="" value="">
+        <input type="submit" name="editForm" value="edit">
     </form>
     <?php
       if(!empty($message))
