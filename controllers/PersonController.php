@@ -3,13 +3,11 @@ class PersonController
 {
   private $person;
 
-  function __construct()
-  {
-      $this->person = new PersonModel;
+  function __construct() {
+    $this->person = new PersonModel;
   }
 
-  function getAll()
-  {
+  function getAll(){ 
     return $this->person->getAll();
   }
 

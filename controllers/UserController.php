@@ -13,8 +13,8 @@ class UserController
         return $this->user->getAll();
     }
 
-    function get(){
-        return $this->user->getPerson('kalle');
+    function get($name){
+        return $this->user->getUser($name);
     }
 
     function getPersonIDs()
