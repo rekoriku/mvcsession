@@ -2,7 +2,7 @@
 class UserController 
 {
     private $user;
-    
+
     function __construct()
     {
         $this->user = new UserModel;
@@ -15,6 +15,11 @@ class UserController
 
     function get(){
         return $this->user->getPerson('kalle');
+    }
+
+    function getPersonIDs()
+    {
+        
     }
 }
 ?>

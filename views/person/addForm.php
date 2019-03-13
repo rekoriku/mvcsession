@@ -1,6 +1,6 @@
 <?php
   include "../includes/header.php";
-
+  
 ?>
 
 <div class="container" style="width:500px">
@@ -21,6 +21,12 @@
       if(!empty($message))
       {
         echo $message;
+      }
+
+      if(isset($_POST["addForm"]))
+      {
+        $personController = new PersonController;
+        $personController->id = $_POST["id"];
       }
     ?>
 </div>
