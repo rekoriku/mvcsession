@@ -14,27 +14,17 @@ function login(){
   }
 }
 
-private function setLoginVars(){
-  $this->user = $_POST["username"];          //Users posted username
-  $this->pass = $_POST["password"];          //Users posted password
-}
 
 private function validateUser($username,$password){
   $user = new UserController;
   if($user->userExist($username) && $user->passValid($username,$password)){
     Session::set("username",$username);
     Session::set("login",true);
-    // $_SESSION["username"] = $this->user;
-    // $_SESSION["login"] = true;
-    var_dump($_SESSION);
-    //header("Location: links.php");
+    header("Location: person/getForm.php");
   } else {
     echo "Wrong username or password";
   }
 }
-
-
-
 
 
 }
