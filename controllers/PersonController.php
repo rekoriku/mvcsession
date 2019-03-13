@@ -25,7 +25,7 @@ class PersonController
     $this->person->id = $id;
     $this->person->fname = $fname;
     $this->person->sname = $sname;
-    $this->person->insert();
+    return $this->person->insert();
   }
 
   function update($id, $fname, $sname)
@@ -33,6 +33,6 @@ class PersonController
     $this->person->id = $id;
     $this->person->fname = $fname;
     $this->person->sname = $sname;
-    $this->person->update();
+    return $this->person->update();
   }
 }
