@@ -13,6 +13,7 @@
         <input type="submit" name="getForm" class="btn btn-primary" value="get"/>
     </form>
     <?php
+        $tbl = "";
         if(isset($_POST["getForm"]))
         {
             if(isset($_POST["firstname"]))
@@ -20,10 +21,17 @@
                 $personController = new PersonController;
                 $results = $personController->getFname($_POST["firstname"]);
 
-                $tbl .= '<table class="table"><thead><tr><th scope="col">id</th><th scope="col">Firstname</th><th scope="col">Lastname</th><th scope="col">Edit</th></tr></thead>';
+                $tbl .= '<table class="table"><thead><tr>
+                <th scope="col">id</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Edit</th></tr></thead>';
                 foreach($results as $person)
                 {
-                    $tbl .= '<tr><th scope="row">'.$person['id'].'</th><td>'.$person['fname'].'</td><td>'.$person['sname'].'</td><td><a href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/getForm.php?id='.$person['id']."&fname=".$person['fname']."&sname=".$person['sname'].'">Edit</a></td>';
+                    $tbl .= '<tr><th scope="row">'.$person['id'].'</th>
+                    <td>'.$person['fname'].'</td>
+                    <td>'.$person['sname'].'</td>
+                    <td><a href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/getForm.php?id='.$person['id']."&fname=".$person['fname']."&sname=".$person['sname'].'">Edit</a></td>';
                 }
                 $tbl .= '</tbody></table>';
             }
