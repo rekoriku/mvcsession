@@ -24,13 +24,6 @@ class Base {
 // }
 
 
-// protected function userExist($user){
-//   return $user == $this->db->getUser($user)['user'];    //check if user exists in database
-// }
-
-// protected function passValid($user,$password){
-//   return md5($password) == $this->db->getUser($user)['pwd']; //check if password is correct 
-// }
 
 
 }
