@@ -1,11 +1,11 @@
 <?php
   include "../includes/header.php";
-  
+
   $message = "";
 
   if(isset($_POST["addForm"]))
   {
-    if(isset($_POST["id"]) && isset($_POST["firstname"]) && isset($_POST["lastname"]))
+    if(Helper::issetAll(["username","password","form"]))
     {
       $personController = new PersonController;
       if($personController->insert($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
@@ -32,7 +32,7 @@
         <label>Lastname:</label>
         <input type="text" name="lastname" class="form-control" placeholder="Enter lastname..."/>
         <br>
-        <input type="submit" name="addForm" value="insert">
+        <input type="submit" name="addForm" value="insert" class="btn btn-primary">
     </form>
     <?php
       if(!empty($message))
