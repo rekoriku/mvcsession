@@ -27,10 +27,10 @@
         <input type="text" name="id" class="form-control" value="<?php echo $_GET["id"]?>"/>
         <br>
         <label>Firstname:</label>
-        <input type="text" name="firstname" class="form-control" value="<?php echo $_GET["firstname"]?>"/>
+        <input type="text" name="firstname" class="form-control" value="<?php echo $_GET["fname"]?>"/>
         <br>
         <label>Lastname:</label>
-        <input type="text" name="lastname" class="form-control" value="<?php echo $_GET["lastname"]?>"/>
+        <input type="text" name="lastname" class="form-control" value="<?php echo $_GET["sname"]?>"/>
         <br>
         <input type="submit" name="editForm" value="edit">
     </form>
