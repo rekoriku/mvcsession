@@ -17,12 +17,12 @@ class UserController
         return $this->user->getUser($name);
     }
 
-    public static function passValid($username,$password){
+    function passValid($username,$password){
         $this->user->username = $username;
         return md5($password) == $this->user->getUser()['pwd']; //check if password is correct 
     }
 
-    public static function userExist($username){
+    function userExist($username){
         $this->user->username = $username;
         return $username == $this->user->getUser()['user'];    //check if user exists in database
     }
