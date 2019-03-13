@@ -1,6 +1,6 @@
 <?php
   include "../includes/header.php";
-  
+
   $message = "";
 
   if(isset($_POST["addForm"]))
@@ -32,7 +32,7 @@
         <label>Lastname:</label>
         <input type="text" name="lastname" class="form-control" placeholder="Enter lastname..."/>
         <br>
-        <input type="submit" name="addForm" value="insert">
+        <input type="submit" name="addForm" value="insert" class="btn btn-primary">
     </form>
     <?php
       if(!empty($message))
