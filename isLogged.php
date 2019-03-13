@@ -1,5 +1,5 @@
 <?php
-require_once 'connection.php';
+//require_once '.php';
 
 //check if session variable is set
 if(!isset($_SESSION["username"])) {

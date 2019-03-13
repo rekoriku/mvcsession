@@ -1,5 +1,5 @@
 <?php 
-require_once '/home/rekoriku/public_html/serverside19/mvcsession/isLogged.php';
+require_once '/home/rekoriku/public_html/serverside19/mvcsession/autoload.php';
 include_once 'navbar.php';
 ?>
 <!DOCTYPE html>
