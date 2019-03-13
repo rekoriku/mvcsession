@@ -5,7 +5,7 @@
 
   if(isset($_POST["addForm"]))
   {
-    if(Helper::issetAll(["username","password","form"]))
+    if(Helper::issetAll(["username","password","lastname"]))
     {
       $personController = new PersonController;
       if($personController->insert($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
@@ -32,7 +32,7 @@
         <label>Lastname:</label>
         <input type="text" name="lastname" class="form-control" placeholder="Enter lastname..."/>
         <br>
-        <input type="submit" name="addForm" value="insert" class="btn btn-primary">
+        <input type="submit" name="addForm" value="Insert" class="btn btn-primary">
     </form>
     <?php
       if(!empty($message))
