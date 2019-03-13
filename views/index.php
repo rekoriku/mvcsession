@@ -12,7 +12,7 @@
         <input type="submit" name="form" class="btn btn-primary" value="send"/>
     </form>
     <?php
-      //$auth->login();
+      Authentication::login();
       if(!empty($message))
       {
         echo '<br><div class="alert alert-danger"><strong>'.$message.'</strong> </div>';
