@@ -8,8 +8,6 @@ function login(){
   
   
   if($isset == true && $isempty == false){
-    var_dump('hello');
-    // $this->setLoginVars();
     $this->validateUser($_POST["username"],$_POST["password"]);
   }
 }
