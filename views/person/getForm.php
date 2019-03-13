@@ -31,7 +31,7 @@
                     $tbl .= '<tr><th scope="row">'.$person['id'].'</th>
                     <td>'.$person['fname'].'</td>
                     <td>'.$person['sname'].'</td>
-                    <td><a href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/editForm.php?id='.$person['id']."&fname=".$person['fname']."&sname=".$person['sname'].' class="btn btn-primary">Edit</a></td>';
+                    <td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/editForm.php?id='.$person['id']."&fname=".$person['fname']."&sname=".$person['sname'].'">Edit</a></td>';
                 }
                 $tbl .= '</tbody></table>';
             }
