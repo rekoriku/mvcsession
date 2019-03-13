@@ -5,7 +5,7 @@
 
   if(isset($_POST["addForm"]))
   {
-    if(Helper::issetAll(["username","password","lastname"]))
+    if(Helper::issetAll(["id","firstname","lastname"]))
     {
       $personController = new PersonController;
       if($personController->insert($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
