@@ -1,5 +1,5 @@
 <?php 
-    include_once "../includes/header.php";
+    include "../includes/header.php";
 
     $message = "";
 ?>
@@ -33,4 +33,6 @@
     ?>
 </div>
 
-<?php include_once "../includes/footer.php" ?>
+<?php 
+    include "../includes/footer.php";
+?>
