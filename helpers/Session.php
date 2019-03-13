@@ -2,7 +2,11 @@
 class Session {
 
   public static function isset($val){
-    isset($_SESSION[$val]);
+    return isset($_SESSION[$val]);
+  }
+
+  public static function set($val1,$val2){
+    $_SESSION[$val1] = $val2;
   }
 
   public static function start(){
