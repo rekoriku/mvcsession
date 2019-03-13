@@ -1,4 +1,6 @@
-<?php include_once 'includes/header.php';?>
+<?php include_once 'includes/header.php';
+$auth = new Authentication;
+?>
 <div class="container" style="width:500px">
     <h3>Login</h3>
     <form method="post">
@@ -11,7 +13,7 @@
         <input type="submit" name="form" class="btn btn-primary" value="send"/>
     </form>
     <?php
-      Authentication::login();
+      $auth->login();
       if(!empty($message))
       {
         echo '<br><div class="alert alert-danger"><strong>'.$message.'</strong> </div>';
