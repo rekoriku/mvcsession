@@ -16,7 +16,7 @@ public static function login(){
     var_dump('hello');
     // $this->setLoginVars();
     $this->validateUser($_POST["username"],$_POST["password"]);
-  } 
+  }
 }
 
 private function setLoginVars(){
