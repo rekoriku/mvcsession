@@ -1,7 +1,7 @@
 <?php
 class UserModel extends Model
 {
-  public $user = "";
+  public $username = "";
   public $pwd = "";
   public $pri = "";
   public $id = "";
@@ -12,8 +12,8 @@ class UserModel extends Model
         return $this->query("SELECT * FROM serverside19_users")->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function getUser($user) {
-        return $this->query("SELECT * FROM serverside19_users WHERE user='$user'")->fetch(PDO::FETCH_ASSOC);
+    public function getUser() {
+        return $this->query("SELECT * FROM serverside19_users WHERE user='$this->username'")->fetch(PDO::FETCH_ASSOC);
     }
 
     function insert() {
