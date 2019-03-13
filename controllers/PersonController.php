@@ -1,5 +1,7 @@
 <?php
-class PersonController {
+class PersonController 
+{
+  private $person;
 
   function getAll()
   {
