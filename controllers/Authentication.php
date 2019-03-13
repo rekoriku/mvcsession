@@ -1,10 +1,5 @@
 <?php
 class Authentication {
-  private $user;
-
-  function __construct() {
-    $this->user = new UserController;
-  }
 
 public static function login(){
   //check if all posted values are true and if so set the variables
@@ -25,7 +20,8 @@ private function setLoginVars(){
 }
 
 private function validateUser($username,$password){
-  if($this->user->userExist($username) && $this->user->passValid($username,$password)){
+  $user = new UserController;
+  if($user->userExist($username) && $user->passValid($username,$password)){
     Session::set("username",$username);
     Session::set("login",true);
     // $_SESSION["username"] = $this->user;
