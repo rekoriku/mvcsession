@@ -5,7 +5,7 @@
 
   if(isset($_POST["editForm"]))
   {
-    if(isset($_POST["id"]) && isset($_POST["firstname"]) && isset($_POST["lastname"]))
+    if(Helper::issetAll(["username","password","form"]))
     {
       $personController = new PersonController;
       if($personController->update($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
