@@ -31,7 +31,7 @@ class PersonModel extends Model
     }
 
   public function update($id) {
-    return $this->query("UPDATE serverside19_persons SET id='$this->id', fname='$this->fname', sname='$this->sname' WHERE id='$this->id'");
+    return $this->query("UPDATE serverside19_persons SET id='$this->id', fname='$this->fname', sname='$this->sname' WHERE id='$id'");
   }
 
   public function delete($id) {
