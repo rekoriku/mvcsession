@@ -44,7 +44,7 @@
         <label>Description:</label>
         <input type="text" name="description" class="form-control" placeholder="Enter your description..."/>
         <br>
-        <input type="submit" name="addForm" value="insert">
+        <input type="submit" name="addForm" value="insert" class="btn btn-primary">
     </form>
     <?php
       if(!empty($message))

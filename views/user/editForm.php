@@ -44,7 +44,7 @@ if(isset($_POST["editForm"]))
       <label>Description:</label>
       <input type="text" name="description" class="form-control" value="<?php echo $_GET["description"]?>"/>
       <br>
-      <input type="submit" name="editForm" value="insert">
+      <input type="submit" name="editForm" value="insert" class="btn btn-primary">
   </form>
   <?php
     if(!empty($message))
