@@ -22,7 +22,7 @@
                 $results = $personController->getFname($_POST["firstname"]);
 
                 $tbl .= '<table class="table"><thead><tr>
-                <th scope="col">id</th>
+                <th scope="col">Id</th>
                 <th scope="col">Firstname</th>
                 <th scope="col">Lastname</th>
                 <th scope="col">Edit</th></tr></thead>';
