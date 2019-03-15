@@ -31,7 +31,7 @@ function login(){
 
 function priority(){
   $userSecret = md5($this->user->getUser(Session::get('username'))['user'] + $this->secret);
-  if($userSecret == md5(Session::get("login"))){
+  if($userSecret == Session::get("login")) {
     return $this->user->getUser(Session::get('username'))['pri'];
   } else {
     echo 'failure';
