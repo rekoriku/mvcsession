@@ -18,8 +18,8 @@ function login(){
 }
 
 function logout(){
-    session_start();
-    session_destroy();
+    Session::start();
+    Session::stop();
     header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/");
   }
 
