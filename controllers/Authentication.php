@@ -29,7 +29,7 @@ function login(){
 
 
 function priority(){
-  $this->user->getUser()['pri'];
+  return $this->user->getUser(Session::get('username'))['pri'];
 }
 
  function validateUser($username,$password){

@@ -9,6 +9,10 @@ class Session {
     $_SESSION[$val1] = $val2;
   }
 
+   public static function get($val){
+    return $_SESSION[$val];
+  }
+
   public static function start(){
     session_start();
   }

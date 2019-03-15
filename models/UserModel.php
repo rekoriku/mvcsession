@@ -35,14 +35,12 @@ class UserModel extends Model
     }
 
     function passValid($username,$password){
-        $this->username = $username;
-        return md5($password) == $this->getUser()['pwd']; //check if password is correct 
+        return md5($password) == $this->getUser($username)['pwd']; //check if password is correct 
     }
 
     function userExist($username){
-        $this->username = $username;
-        return $username == $this->getUser()['user'];    //check if user exists in database
+        return $username == $this->getUser($username)['user'];    //check if user exists in database
     }
 
-    
+
 }
