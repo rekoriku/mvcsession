@@ -18,8 +18,7 @@ function login(){
 }
 
 function logout(){
-    Session::stop();
-    header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/");
+    header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/logout.php");
   }
 
 
