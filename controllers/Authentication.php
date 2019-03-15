@@ -35,11 +35,10 @@ function validSess() {
 }
 
 function priority(){
-;
   if($this->validSess()) {
     return $this->user->getUser(Session::get('username'))['pri'];
   } else {
-    echo 'failure';
+    echo 'invalid session';
   }
 }
 
