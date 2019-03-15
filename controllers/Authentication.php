@@ -1,6 +1,7 @@
 <?php
 class Authentication {
   private $user;
+  private $secret = 'viisistasataa';
     function __construct() {
       $this->user = new UserModel;
     }
@@ -29,7 +30,13 @@ function login(){
 
 
 function priority(){
-  return $this->user->getUser(Session::get('username'))['pri'];
+  $userSecret = md5($this->user->getUser(Session::get('username'))['user'] + $this->secret);
+  if($userSecret == md5(Session::get("username")+$this->secret)){
+    return $this->user->getUser(Session::get('username'))['pri'];
+  } else {
+    echo 'failure';
+  }
+  
 }
 
  function validateUser($username,$password){
