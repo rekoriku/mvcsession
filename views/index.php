@@ -14,6 +14,7 @@ $auth = new Authentication;
     </form>
     <?php
       $auth->login();
+      var_dump($auth->priority());
       if(!empty($message))
       {
         echo '<br><div class="alert alert-danger"><strong>'.$message.'</strong> </div>';
