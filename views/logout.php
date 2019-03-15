@@ -1,3 +1,3 @@
 <?php
-Authentication::logout();
+  Authentication::logout();
 ?>
