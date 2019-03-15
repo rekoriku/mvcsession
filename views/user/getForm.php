@@ -18,7 +18,6 @@ include_once "../includes/header.php";
             {
                 $userController = new UserController;
                 $results = $userController->get($_POST["user"]);
-                echo $results;
                 $tbl .= '<table class="table"><thead><tr>
                 <th scope="col">Username</th>
                 <th scope="col">Person ID</th>
