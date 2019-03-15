@@ -21,7 +21,7 @@
       <a class="nav-link" href="editForm.php">Edit Accounts</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
+        <a class="nav-link" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/logout.php">Logout</a>
     </li>
   </ul>
 </nav>
