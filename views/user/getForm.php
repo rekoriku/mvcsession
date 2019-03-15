@@ -18,7 +18,6 @@ include_once "../includes/header.php";
             {
                 $userController = new UserController;
                 $results = $userController->get($_POST["user"]);
-                var_dump($results);
                 $tbl .= '<table class="table"><thead><tr>
                 <th scope="col">Username</th>
                 <th scope="col">Person ID</th>
@@ -29,7 +28,7 @@ include_once "../includes/header.php";
                     $tbl .= '<tr><th scope="row">'.$user['user'].'</th>
                     <td>'.$user['id'].'</td>
                     <td>'.$user['description'].'</td>
-                    <td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/editForm.php?id='.$user['user']."&id=".$user['id']."&description=".$user['description'].'">Edit</a></td>';
+                    <td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/editForm.php?id='.$user['user']."&id=".$user['id']."&description=".$user['description'].'">Edit</a></td>';
                 }
                 $tbl .= '</tbody></table>';
             }
