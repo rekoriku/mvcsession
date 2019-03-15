@@ -20,12 +20,14 @@ include_once "../includes/header.php";
                 $results = $userController->getAllUsers($_POST["user"]);
                 $tbl .= '<table class="table"><thead><tr>
                 <th scope="col">Username</th>
+                <th scope="col">Pri</th>
                 <th scope="col">Person ID</th>
                 <th scope="col">Description</th>
                 <th scope="col">Edit</th></tr></thead>';
                 foreach($results as $user)
                 {
                     $tbl .= '<tr><th scope="row">'.$user['user'].'</th>
+                    <td>'.$user['pri'].'</td>
                     <td>'.$user['id'].'</td>
                     <td>'.$user['description'].'</td>
                     <td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/editForm.php?user='.$user['user']."&pri=".$user['pri']."&id=".$user['id']."&description=".$user['description'].'">Edit</a></td>';
