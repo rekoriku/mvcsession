@@ -25,8 +25,11 @@
                 $tbl .= '<table class="table"><thead><tr>
                 <th scope="col">Id</th>
                 <th scope="col">Firstname</th>
-                <th scope="col">Lastname</th>
-                <th scope="col">Edit</th></tr></thead>';
+                <th scope="col">Lastname</th>';
+                if($authentication->priority() == 1 || $authentication->priority() == 0)
+                {
+                    $tbl .= '<th scope="col">Edit</th></tr></thead>';
+                }
                 foreach($results as $person)
                 {
                     $tbl .= '<tr><th scope="row">'.$person['id'].'</th>
