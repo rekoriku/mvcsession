@@ -2,7 +2,7 @@
   include "../includes/header.php";
   $authentication = new Authentication;
   $authentication->priority();
-  
+
   $message = "";
 
   if(isset($_POST["addForm"]))
@@ -13,6 +13,7 @@
       if($personController->insert($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
       {
         $message = "Succesfully inserted a new person to the database.";
+        header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/getForm.php");
       }
       else
       {

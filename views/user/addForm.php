@@ -16,6 +16,7 @@
       if($userController->insert($_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
       {
         $message = "Succesfully inserted a new person to the database.";
+        header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/getForm.php");
       }
       else
       {

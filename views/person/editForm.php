@@ -13,6 +13,7 @@
       if($personController->update($_GET['id'], $_POST["id"], $_POST["firstname"], $_POST["lastname"]))
       {
         $message = "Succesfully edited persons record in the database!";
+        header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/getForm.php");
       }
       else
       {
