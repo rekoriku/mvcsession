@@ -1,3 +1,4 @@
 <?php
-  Authentication::logout();
+  $auth = new Authentication;
+  $auth->logout();
 ?>
