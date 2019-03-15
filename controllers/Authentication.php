@@ -29,14 +29,18 @@ function login(){
 // }
 
 
+
+function validSess() {
+  return md5($this->user->getUser(Session::get('username'))['user'] + $this->secret) == Session::get("login");
+}
+
 function priority(){
-  $userSecret = md5($this->user->getUser(Session::get('username'))['user'] + $this->secret);
-  if($userSecret == Session::get("login")) {
+;
+  if($this->validSess()) {
     return $this->user->getUser(Session::get('username'))['pri'];
   } else {
     echo 'failure';
   }
-  
 }
 
  function validateUser($username,$password){
