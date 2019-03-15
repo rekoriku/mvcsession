@@ -8,7 +8,7 @@ if(isset($_POST["editForm"]))
   if(Helper::issetAll(["username","password", "pri", "id", "description"]))
   {
     $userController = new UserController;
-    if($userController->update($_GET['username'], $_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
+    if($userController->update($_GET['user'], $_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
     {
       $message = "Succesfully inserted a new person to the database.";
     }
