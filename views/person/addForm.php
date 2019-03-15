@@ -1,4 +1,7 @@
 <?php
+  $authentication = new Authentication;
+  $authentication->validSess();
+
   include "../includes/header.php";
 
   $message = "";
