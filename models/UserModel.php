@@ -25,8 +25,8 @@ class UserModel extends Model
         return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$this->username', md5('$this->pwd'), '$this->pri', '$this->id', '$this->description')");
     }
 
-    function update() {
-        return $this->query("UPDATE serverside19_users SET user='$this->username', pwd=md5('$this->pwd'), pri='$this->pri', id='$this->id', description='$this->description' WHERE user='$this->username'");
+    function update($currentUser) {
+        return $this->query("UPDATE serverside19_users SET user='$this->username', pwd=md5('$this->pwd'), pri='$this->pri', id='$this->id', description='$this->description' WHERE user='$currentUser'");
     }
 
     public function delete($user) {

@@ -32,14 +32,14 @@ class UserController
         return $this->user->insert();
     }
   
-    function update($user, $pwd, $pri, $id, $description)
+    function update($currentUser, $user, $pwd, $pri, $id, $description)
     {
         $this->user->username = $user;
         $this->user->pwd = $pwd;
         $this->user->pri = $pri;
         $this->user->id = $id;
         $this->user->description = $description;
-        return $this->user->update();
+        return $this->user->update($currentUser);
     }
 }
 ?>
