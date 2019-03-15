@@ -7,7 +7,7 @@
   <ul class="navbar-nav">
     <li class="nav-item">
         <?php
-            if(!empty(Session::get('username')))
+            if(Session::issetSes('username'))
             {
                 echo '<span class="navbar-brand mb-0 h1">'.Session::get('username').'</span>';
             }
