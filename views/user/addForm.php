@@ -5,10 +5,10 @@
 
   if(isset($_POST["addForm"]))
   {
-    if(Helper::issetAll(["username","password","description"]))
+    if(Helper::issetAll(["username","password", "pri", "id", "description"]))
     {
-      $personController = new PersonController;
-      if($personController->insert($_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
+      $userController = new UserController;
+      if($userController->insert($_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
       {
         $message = "Succesfully inserted a new person to the database.";
       }
