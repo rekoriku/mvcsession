@@ -30,15 +30,7 @@
     <?php
       if($authentication->priority() == 0)
       {
-        echo '<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          User
-        </a>
-        <div class="dropdown-menu" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/getForm.php">Get</a>
-          <a class="dropdown-item" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/addForm.php">Add</a>
-        </div>
-      </li>';
+        echo '<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a><div class="dropdown-menu" aria-labelledby="userDropdown"><a class="dropdown-item" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/getForm.php">Get</a><a class="dropdown-item" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/addForm.php">Add</a></div></li>';
       }
     ?>
     <!-- <li class="nav-item dropdown">
