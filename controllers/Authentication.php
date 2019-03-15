@@ -17,7 +17,7 @@ function login(){
   }
 }
 
-function logout(){
+public static function logout(){
     Session::start();
     Session::stop();
     header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/");
@@ -37,7 +37,7 @@ function priority(){
   if($this->validSess()) {
     return $this->user->getUser(Session::get('username'))['pri'];
   } else {
-    $this->logout();
+    self->logout();
   }
 }
 
