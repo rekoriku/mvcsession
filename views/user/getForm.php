@@ -28,7 +28,7 @@ include_once "../includes/header.php";
                     $tbl .= '<tr><th scope="row">'.$user['user'].'</th>
                     <td>'.$user['id'].'</td>
                     <td>'.$user['description'].'</td>
-                    <td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/editForm.php?id='.$user['user']."&pwd=".$user['pwd']."&pri=".$user['pri']."&id=".$user['id']."&description=".$user['description'].'">Edit</a></td>';
+                    <td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/user/editForm.php?user='.$user['user']."&pwd=".$user['pwd']."&pri=".$user['pri']."&id=".$user['id']."&description=".$user['description'].'">Edit</a></td>';
                 }
                 $tbl .= '</tbody></table>';
             }

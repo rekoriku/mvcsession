@@ -24,19 +24,19 @@ if(isset($_POST["editForm"]))
   <h3>Insert User</h3>
   <form method="post">
       <label>Username:</label>
-      <input type="text" name="username" class="form-control" placeholder="Enter your username..."/>
+      <input type="text" name="username" class="form-control" value="<?php echo $_GET["user"]?>"/>
       <br>
       <label>Password:</label>
-      <input type="password" name="password" class="form-control" placeholder="Enter your password..."/>
+      <input type="password" name="password" class="form-control" value="<?php echo $_GET["pwd"]?>"/>
       <br>
       <label>Pri:</label>
-      <input type="text" name="pri" class="form-control" placeholder="Enter your the priority..."/>
+      <input type="text" name="pri" class="form-control" value="<?php echo $_GET["pri"]?>"/>
       <br>
       <label>ID:</label>
-      <input type="text" name="id" class="form-control" placeholder="Enter your the id..."/>
+      <input type="text" name="id" class="form-control" value="<?php echo $_GET["id"]?>"/>
       <br>
       <label>Description:</label>
-      <input type="text" name="description" class="form-control" placeholder="Enter your description..."/>
+      <input type="text" name="description" class="form-control" value="<?php echo $_GET["description"]?>"/>
       <br>
       <input type="submit" name="editForm" value="insert">
   </form>
