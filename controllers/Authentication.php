@@ -1,5 +1,9 @@
 <?php
 class Authentication {
+  private $user;
+    function __construct() {
+      $this->user = new UserModel;
+    }
 
 function login(){
   //check if all posted values are true and if so set the variables
@@ -14,8 +18,8 @@ function login(){
 
 private function isLogged(){
   if(Session::issetSes("username")){
-    echo "You are not logged in!";
-    exit();
+    //echo "You are not logged in!";
+    //exit();
   }
 
   if(Session::issetSes("username") && Session::issetSes("login")){
@@ -23,9 +27,9 @@ private function isLogged(){
   }
 }
 
-private function validateUser($username,$password){
-  $user = new UserModel;
-  if($user->userExist($username) && $user->passValid($username,$password)){
+ function validateUser($username,$password){
+  
+  if($this->user->userExist($username) && $this->user->passValid($username,$password)){
     Session::set("username",$username);
     Session::set("login",true);
     header("Location: person/getForm.php");
