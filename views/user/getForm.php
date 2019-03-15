@@ -1,6 +1,5 @@
 <?php 
 include_once "../includes/header.php";
-$form = new Form($db);
 ?>
 
 <div class="container" style="width:500px">
