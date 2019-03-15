@@ -19,12 +19,12 @@ private function isLogged(){
   }
 
   if(Session::issetSes("username") && Session::issetSes("login")){
-    
+
   }
 }
 
 private function validateUser($username,$password){
-  $user = new UserController;
+  $user = new UserModel;
   if($user->userExist($username) && $user->passValid($username,$password)){
     Session::set("username",$username);
     Session::set("login",true);

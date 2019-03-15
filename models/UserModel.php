@@ -33,4 +33,15 @@ class UserModel extends Model
             return $this->query("DELETE FROM serverside19_users WHERE user ='$user'");
         }
     }
+
+    function passValid($username,$password){
+        $this->username = $username;
+        return md5($password) == $this->getUser()['pwd']; //check if password is correct 
+    }
+
+    function userExist($username){
+        $this->username = $username;
+        return $username == $this->getUser()['user'];    //check if user exists in database
+    }
+
 }
