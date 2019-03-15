@@ -1,6 +1,7 @@
 <?php
 class Authentication {
   private $user;
+  private $secret = 'viisistasataa';
     function __construct() {
       $this->user = new UserModel;
     }
@@ -29,13 +30,19 @@ function login(){
 
 
 function priority(){
-  return $this->user->getUser(Session::get('username'))['pri'];
+  $userSecret = md5($this->user->getUser(Session::get('username'))['user'] + $this->secret);
+  if($userSecret == Session::get("login")) {
+    return $this->user->getUser(Session::get('username'))['pri'];
+  } else {
+    echo 'failure';
+  }
+  
 }
 
  function validateUser($username,$password){
   if($this->user->userExist($username) && $this->user->passValid($username,$password)){
     Session::set("username",$username);
-    Session::set("login",md5($username+'viisistasataa'));
+    Session::set("login",md5($username+ $this->secret));
     header("Location: person/getForm.php");
   } else {
     echo "Wrong username or password";
