@@ -1,5 +1,10 @@
 <?php
   include_once "../includes/header.php";
+  $authentication = new Authentication;
+  if($authentication->priority() != 0)
+  {
+    header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/getForm.php");
+  }
   
   $message = "";
 
