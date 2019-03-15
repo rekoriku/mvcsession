@@ -43,4 +43,6 @@ class UserModel extends Model
         $this->username = $username;
         return $username == $this->getUser()['user'];    //check if user exists in database
     }
+
+    
 }

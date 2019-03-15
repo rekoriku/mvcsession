@@ -16,22 +16,28 @@ function login(){
   }
 }
 
-private function isLogged(){
-  if(Session::issetSes("username")){
-    //echo "You are not logged in!";
-    //exit();
-  }
+// private function isLogged(){
+//   if(Session::issetSes("username")){
+//     //echo "You are not logged in!";
+//     //exit();
+//   }
 
-  if(Session::issetSes("username") && Session::issetSes("login")){
+//   if(Session::issetSes("username") && Session::issetSes("login")){
 
-  }
+//   }
+// }
+
+
+function priority(){
+  $this->user->getUser()['pri'];
 }
 
  function validateUser($username,$password){
-  
   if($this->user->userExist($username) && $this->user->passValid($username,$password)){
+    $this->user->username = $username;
+    $this->user->password = md5($password);
     Session::set("username",$username);
-    Session::set("login",true);
+    Session::set("login",md5($username+'viisistasataa'));
     header("Location: person/getForm.php");
   } else {
     echo "Wrong username or password";
