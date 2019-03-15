@@ -25,7 +25,12 @@ function logout(){
 
 
 function validSess() {
-  return md5($this->user->getUser(Session::get('username'))['user'] + $this->secret) == Session::get("login");
+  if(Session::issetSes('username')&& Session::issetSes('login')){
+    return md5($this->user->getUser(Session::get('username'))['user'] + $this->secret) == Session::get("login");
+  } else {
+    return false;
+  }
+  
 }
 
 function priority(){
