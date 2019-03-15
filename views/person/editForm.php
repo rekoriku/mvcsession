@@ -1,8 +1,7 @@
 <?php 
+  include "../includes/header.php"; 
   $authentication = new Authentication;
   $authentication->priority();
-
-  include "../includes/header.php"; 
 
   $message = "";
 
