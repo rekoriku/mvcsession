@@ -19,6 +19,7 @@
             if(isset($_POST["firstname"]))
             {
                 $personController = new PersonController;
+                $authentication = new Authentication;
                 $results = $personController->getFname($_POST["firstname"]);
 
                 $tbl .= '<table class="table"><thead><tr>
@@ -30,8 +31,11 @@
                 {
                     $tbl .= '<tr><th scope="row">'.$person['id'].'</th>
                     <td>'.$person['fname'].'</td>
-                    <td>'.$person['sname'].'</td>
-                    <td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/editForm.php?id='.$person['id']."&fname=".$person['fname']."&sname=".$person['sname'].'">Edit</a></td>';
+                    <td>'.$person['sname'].'</td>';
+                    if($authentication->priority == 1 || $authentication->priority == 0)
+                    {
+                        $tbl .= '<td><a class="btn btn-primary" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/editForm.php?id='.$person['id']."&fname=".$person['fname']."&sname=".$person['sname'].'">Edit</a></td>';
+                    }
                 }
                 $tbl .= '</tbody></table>';
             }
