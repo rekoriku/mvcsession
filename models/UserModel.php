@@ -13,7 +13,7 @@ class UserModel extends Model
     }
 
     public function getUser() {
-        return $this->query("SELECT * FROM serverside19_users WHERE user='$this->username'")->fetch(PDO::FETCH_ASSOC);
+        return $this->query("SELECT * FROM serverside19_users WHERE user='$this->username'")->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function insert() {

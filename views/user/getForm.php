@@ -8,7 +8,7 @@ include_once "../includes/header.php";
         <label>Username:</label>
         <input type="text" name="user" class="form-control" placeholder="Enter username..."/>
         <br>
-        <input type="submit" name="getForm" class="btn btn-primary" value="get"/>
+        <input type="submit" name="getForm" class="btn btn-primary" value="Get"/>
     </form>
     <?php
         $tbl = "";
