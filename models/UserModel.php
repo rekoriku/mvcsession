@@ -9,7 +9,7 @@ class UserModel extends Model
     
     public function getAll()
     {
-        return $this->query("SELECT * FROM serverside19_users")->fetch(PDO::FETCH_ASSOC);
+        return $this->query("SELECT * FROM serverside19_users")->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getUser() {
@@ -43,5 +43,4 @@ class UserModel extends Model
         $this->username = $username;
         return $username == $this->getUser()['user'];    //check if user exists in database
     }
-
 }
