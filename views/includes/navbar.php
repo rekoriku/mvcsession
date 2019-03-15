@@ -7,9 +7,13 @@
   <ul class="navbar-nav">
     <li class="nav-item">
         <?php
-            if(!empty($session_username))
+            if(!empty(Session::get('username')))
             {
-                echo '<span class="navbar-brand mb-0 h1">'.$session_username.'</span>';
+                echo '<span class="navbar-brand mb-0 h1">'.Session::get('username').'</span>';
+            }
+            else
+            {
+              echo '<span class="navbar-brand mb-0 h1">Anonymous</span>';
             }
         ?>
     </li>
