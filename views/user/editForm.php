@@ -27,7 +27,7 @@ if(isset($_POST["editForm"]))
       <input type="text" name="username" class="form-control" value="<?php echo $_GET["user"]?>"/>
       <br>
       <label>Password:</label>
-      <input type="password" name="password" class="form-control" value="<?php echo $_GET["pwd"]?>"/>
+      <input type="password" name="password" class="form-control"/>
       <br>
       <label>Pri:</label>
       <input type="text" name="pri" class="form-control" value="<?php echo $_GET["pri"]?>"/>
