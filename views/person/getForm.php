@@ -10,7 +10,7 @@
         <label>Firstname:</label>
         <input type="text" name="firstname" class="form-control" placeholder="Enter firstname..."/>
         <br>
-        <input type="submit" name="getForm" class="btn btn-primary" value="get"/>
+        <input type="submit" name="getForm" class="btn btn-primary" value="Get"/>
     </form>
     <?php
         $tbl = "";
