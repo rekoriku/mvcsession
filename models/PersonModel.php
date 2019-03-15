@@ -22,20 +22,16 @@ class PersonModel extends Model
     return $this->query("SELECT * FROM serverside19_persons WHERE sname='$person'")->fetch(PDO::FETCH_ASSOC);
   }
 
-  function idExist(){
-  return $this->id == $this->getId($this->id)['id'];    //check if id exists in database
-}
+  public function idExist(){
+    return $this->id == $this->getId($this->id)['id'];    //check if id exists in database
+  }
 
-  function insert() {
-    //if(!empty($this->id) && !empty($this->fname) && !empty($this->sname)) {
-        return $this->query("INSERT INTO serverside19_persons (id, fname, sname) VALUES ('$this->id', '$this->fname', '$this->sname')");
-      //}
+  public function insert() {
+    return $this->query("INSERT INTO serverside19_persons (id, fname, sname) VALUES ('$this->id', '$this->fname', '$this->sname')");
     }
 
-  function update() {
-    // if(!empty($this->id) && $this->idExist($this->id)) {
-        return $this->query("UPDATE serverside19_persons SET id='$this->id', fname='$this->fname', sname='$this->sname' WHERE id='$this->id'");
-    // }
+  public function update() {
+    return $this->query("UPDATE serverside19_persons SET id='$this->id', fname='$this->fname', sname='$this->sname' WHERE id='$this->id'");
   }
 
   public function delete($id) {
