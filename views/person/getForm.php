@@ -30,6 +30,7 @@
                 {
                     $tbl .= '<th scope="col">Edit</th></tr></thead>';
                 }
+                $tbl .= '</tr></thead>';
                 foreach($results as $person)
                 {
                     $tbl .= '<tr><th scope="row">'.$person['id'].'</th>
