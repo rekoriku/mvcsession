@@ -28,6 +28,7 @@ function validSess() {
   if(Session::issetSes('username')&& Session::issetSes('login')){
     return md5($this->user->getUser(Session::get('username'))['user'] + $this->secret) == Session::get("login");
   } else {
+    header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/");
     return false;
   }
   
