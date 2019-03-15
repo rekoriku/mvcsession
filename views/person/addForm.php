@@ -1,6 +1,6 @@
 <?php
   $authentication = new Authentication;
-  $authentication->validSess();
+  $authentication->priority();
 
   include "../includes/header.php";
 
