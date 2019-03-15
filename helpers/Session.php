@@ -25,12 +25,6 @@ class Session {
     unset($_SESSION[$val]);
   }
 
-  public static function logout($redirect){
-    session_start();
-    session_destroy();
-    header("location: $redirect");
-  }
-
 }
 
 ?>
