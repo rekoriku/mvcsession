@@ -37,7 +37,7 @@ function priority(){
   if($this->validSess()) {
     return $this->user->getUser(Session::get('username'))['pri'];
   } else {
-    header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views");
+    echo 'invalid session';
   }
 }
 
