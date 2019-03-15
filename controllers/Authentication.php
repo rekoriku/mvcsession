@@ -34,8 +34,6 @@ function priority(){
 
  function validateUser($username,$password){
   if($this->user->userExist($username) && $this->user->passValid($username,$password)){
-    $this->user->username = $username;
-    $this->user->password = md5($password);
     Session::set("username",$username);
     Session::set("login",md5($username+'viisistasataa'));
     header("Location: person/getForm.php");
