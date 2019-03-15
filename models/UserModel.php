@@ -22,15 +22,11 @@ class UserModel extends Model
     }
 
     function insert() {
-        //if(!empty($this->user) && !empty($this->pwd) && !empty($this->pri) && !empty($this->id) && !empty($this->description)) {
-            return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$this->username', md5('$this->pwd'), '$this->pri', '$this->id', '$this->description')");
-        //}
+        return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$this->username', md5('$this->pwd'), '$this->pri', '$this->id', '$this->description')");
     }
 
     function update() {
-        if(!empty($this->user)) {
-            return $this->query("UPDATE serverside19_users SET user='$this->user', id='$this->id', pri='$this->pri', description='$this->description' WHERE user='$this->user'");
-        }
+        return $this->query("UPDATE serverside19_users SET user='$this->username', pwd=md5('$this->pwd'), pri='$this->pri', id='$this->id', description='$this->description' WHERE user='$this->username'");
     }
 
     public function delete($user) {
@@ -46,6 +42,4 @@ class UserModel extends Model
     function userExist($username){
         return $username == $this->getUser($username)['user'];    //check if user exists in database
     }
-
-
 }

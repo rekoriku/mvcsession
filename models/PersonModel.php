@@ -30,7 +30,7 @@ class PersonModel extends Model
     return $this->query("INSERT INTO serverside19_persons (id, fname, sname) VALUES ('$this->id', '$this->fname', '$this->sname')");
     }
 
-  public function update() {
+  public function update($id) {
     return $this->query("UPDATE serverside19_persons SET id='$this->id', fname='$this->fname', sname='$this->sname' WHERE id='$this->id'");
   }
 

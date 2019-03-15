@@ -28,11 +28,11 @@ class PersonController
     return $this->person->insert();
   }
 
-  function update($id, $fname, $sname)
+  function update($currentID, $id, $fname, $sname)
   {
     $this->person->id = $id;
     $this->person->fname = $fname;
     $this->person->sname = $sname;
-    return $this->person->update();
+    return $this->person->update($currentID);
   }
 }

@@ -8,7 +8,7 @@
     if(Helper::issetAll(["id","firstname","lastname"]))
     {
       $personController = new PersonController;
-      if($personController->update($_POST["id"], $_POST["firstname"], $_POST["lastname"]))
+      if($personController->update($_GET['id'], $_POST["id"], $_POST["firstname"], $_POST["lastname"]))
       {
         header("views/person/getForm.php");
         $message = "Succesfully edited persons record in the database!";
