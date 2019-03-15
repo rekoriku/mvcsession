@@ -22,7 +22,7 @@
           <?php
             if($authentication->priority() == 0 || $authentication->priority() == 1)
             {
-              echo '<a class="dropdown-item" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/addForm.php">Add</a>"';
+              echo '<a class="dropdown-item" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/addForm.php">Add</a>';
             }
           ?>
         </div>
