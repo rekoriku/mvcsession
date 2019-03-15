@@ -17,6 +17,11 @@ class UserController
         return $this->user->getUser($name);
     }
 
+    function getAllUsers($name)
+    {
+        return $this->user->getAllUsers($name);
+    }
+
     function getPersonIDs()
     {
         

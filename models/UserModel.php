@@ -16,6 +16,11 @@ class UserModel extends Model
         return $this->query("SELECT * FROM serverside19_users WHERE user='$name'")->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function getAllUsers()
+    {
+        return $this->query("SELECT * FROM serverside19_users WHERE user='$name'")->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     function insert() {
         //if(!empty($this->user) && !empty($this->pwd) && !empty($this->pri) && !empty($this->id) && !empty($this->description)) {
             return $this->query("INSERT INTO serverside19_users (user, pwd, pri, id, description) VALUES ('$this->user', '$this->pwd', '$this->pri', '$this->id', '$this->description')");
