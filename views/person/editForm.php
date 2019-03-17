@@ -27,13 +27,13 @@
     <h3>Edit Person</h3>
     <form method="post">
         <label>ID:</label>
-        <input type="text" name="id" class="form-control" value="<?php echo $_GET["id"]?>"/>
+        <input type="text" name="id" class="form-control" value="<?php if(isset($_GET["id"])){echo $_GET["id"];}?>"/>
         <br>
         <label>Firstname:</label>
-        <input type="text" name="firstname" class="form-control" value="<?php echo $_GET["fname"]?>"/>
+        <input type="text" name="firstname" class="form-control" value="<?php if(isset($_GET["fname"])){echo $_GET["fname"];}?>"/>
         <br>
         <label>Lastname:</label>
-        <input type="text" name="lastname" class="form-control" value="<?php echo $_GET["sname"]?>"/>
+        <input type="text" name="lastname" class="form-control" value="<?php if(isset($_GET["sname"])){echo $_GET["sname"];}?>"/>
         <br>
         <input type="submit" name="editForm" value="Edit" class="btn btn-primary">
     </form>

@@ -30,19 +30,19 @@ if(isset($_POST["editForm"]))
   <h3>Insert User</h3>
   <form method="post">
       <label>Username:</label>
-      <input type="text" name="username" class="form-control" value="<?php echo $_GET["user"]?>"/>
+      <input type="text" name="username" class="form-control" value="<?php if(isset($_GET["user"])){echo $_GET["user"];}?>"/>
       <br>
       <label>Password:</label>
       <input type="password" name="password" class="form-control"/>
       <br>
       <label>Pri:</label>
-      <input type="text" name="pri" class="form-control" value="<?php echo $_GET["pri"]?>"/>
+      <input type="text" name="pri" class="form-control" value="<?php if(isset($_GET["pri"])){echo $_GET["pri"];}?>"/>
       <br>
       <label>ID:</label>
-      <input type="text" name="id" class="form-control" value="<?php echo $_GET["id"]?>"/>
+      <input type="text" name="id" class="form-control" value="<?php if(isset($_GET["id"])){echo $_GET["id"];}?>"/>
       <br>
       <label>Description:</label>
-      <input type="text" name="description" class="form-control" value="<?php echo $_GET["description"]?>"/>
+      <input type="text" name="description" class="form-control" value="<?php if(isset($_GET["description"])){echo $_GET["description"];}?>"/>
       <br>
       <input type="submit" name="editForm" value="Edit" class="btn btn-primary">
   </form>
