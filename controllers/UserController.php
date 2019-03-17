@@ -26,7 +26,14 @@ class UserController
     {
         $this->user->username = $user;
         $this->user->pwd = $pwd;
-        $this->user->pri = $pri;
+        if($pri == "admin")
+        {
+            $this->user->pri = 0;
+        }
+        else if($pri == "basic")
+        {
+            $this->user->pri = 1;
+        }
         $this->user->id = $id;
         $this->user->description = $description;
         return $this->user->insert();
