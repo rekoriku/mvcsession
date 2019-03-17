@@ -10,7 +10,7 @@ $auth = new Authentication;
         <label>Password</label>
         <input type="password" name="password" class="form-control"/>
         <br>
-        <input type="submit" name="form" class="btn btn-primary" value="send"/>
+        <input type="submit" name="form" class="btn btn-primary" value="Login"/>
     </form>
     <?php
       $auth->login();
