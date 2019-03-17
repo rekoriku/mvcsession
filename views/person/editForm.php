@@ -1,7 +1,7 @@
 <?php 
   include "../includes/header.php"; 
   $authentication = new Authentication;
-  if($authentication->priority() != 0 || $authentication->priority() != 1)
+  if($authentication->priority() == -1)
   {
     header("location: http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/person/getForm.php");
   }
