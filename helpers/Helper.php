@@ -31,7 +31,7 @@ Class Helper {
   }
 
   static public function isEmptyAny($vals){
-    return self::allTrue(self::isEmptyMap($vals));    // check if any of the variables is empty
+    return self::allTrue(self::isEmptyMap($vals));    // check if any of the variables is empty and return true if it finds any empty values
   }
 
   static public function issetMap($vals){
