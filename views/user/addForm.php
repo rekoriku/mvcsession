@@ -36,7 +36,12 @@
         <input type="password" name="password" class="form-control" placeholder="Enter your password..."/>
         <br>
         <label>Pri:</label>
-        <input type="text" name="pri" class="form-control" placeholder="Enter your the priority..."/>
+        <div class="radio">
+          <label><input type="radio" name="pri" checked>Basic</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="pri">Admin</label>
+        </div>
         <br>
         <label>ID:</label>
         <input type="text" name="id" class="form-control" placeholder="Enter your the id..."/>
