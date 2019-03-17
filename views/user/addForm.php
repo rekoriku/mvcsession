@@ -37,10 +37,10 @@
         <br>
         <label>Pri:</label>
         <div class="radio">
-          <label><input type="radio" name="pri" checked>Basic</label>
+          <label><input type="radio" name="pri" value="basic" checked>Basic</label>
         </div>
         <div class="radio">
-          <label><input type="radio" name="pri">Admin</label>
+          <label><input type="radio" name="pri" value="admin">Admin</label>
         </div>
         <br>
         <label>ID:</label>
