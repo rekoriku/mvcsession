@@ -36,7 +36,12 @@ if(isset($_POST["editForm"]))
       <input type="password" name="password" class="form-control"/>
       <br>
       <label>Pri:</label>
-      <input type="text" name="pri" class="form-control" value="<?php if(isset($_GET["pri"])){echo $_GET["pri"];}?>"/>
+      <div class="radio">
+        <label><input type="radio" name="pri" value="basic" checked>Basic</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="pri" value="admin">Admin</label>
+      </div>
       <br>
       <label>ID:</label>
       <input type="text" name="id" class="form-control" value="<?php if(isset($_GET["id"])){echo $_GET["id"];}?>"/>
