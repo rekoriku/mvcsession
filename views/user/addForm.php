@@ -10,7 +10,7 @@
 
   if(isset($_POST["addForm"]))
   {
-    if(Helper::issetAll(["username","password", "pri", "id", "description"]) && !Helper::isEmptyAny(["username","password", "pri", "id"]))
+    if(Helper::issetAll(["username","password", "pri", "id", "description"]) && !Helper::isEmptyAny(["username","password", "id"]))
     {
       $userController = new UserController;
       if($userController->insert($_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
@@ -36,7 +36,12 @@
         <input type="password" name="password" class="form-control" placeholder="Enter your password..."/>
         <br>
         <label>Pri:</label>
-        <input type="text" name="pri" class="form-control" placeholder="Enter your the priority..."/>
+        <div class="radio">
+          <label><input type="radio" name="pri" value="basic" checked>Basic</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="pri" value="admin">Admin</label>
+        </div>
         <br>
         <label>ID:</label>
         <input type="text" name="id" class="form-control" placeholder="Enter your the id..."/>
