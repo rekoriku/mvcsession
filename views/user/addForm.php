@@ -10,7 +10,7 @@
 
   if(isset($_POST["addForm"]))
   {
-    if(Helper::issetAll(["username","password", "pri", "id", "description"]) && Helper::isEmptyAny(["username","password", "pri", "id"]))
+    if(Helper::issetAll(["username","password", "pri", "id", "description"]) && !Helper::isEmptyAny(["username","password", "pri", "id"]))
     {
       $userController = new UserController;
       if($userController->insert($_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
