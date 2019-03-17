@@ -10,7 +10,7 @@ $message = "";
 
 if(isset($_POST["editForm"]))
 {
-  if(Helper::issetAll(["username","password", "pri", "id", "description"]))
+  if(Helper::issetAll(["username","password", "pri", "id", "description"]) && !empty($_POST["password"]))
   {
     $userController = new UserController;
     if($userController->update($_GET['user'], $_POST["username"], $_POST["password"], $_POST["pri"], $_POST["id"], $_POST["description"]))
