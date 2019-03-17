@@ -38,7 +38,17 @@
       }
     ?>
     <li class="nav-item">
-        <a class="nav-link" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/logout.php">Logout</a>
+        <a class="nav-link" href="http://niisku.lamk.fi/~rekoriku/serverside19/mvcsession/views/logout.php">        
+          <?php
+            if(Session::issetSes('username'))
+            {
+                echo 'Logout';
+            }
+            else
+            {
+              echo 'Login';
+            }
+          ?></a>
     </li>
   </ul>
 </nav>
